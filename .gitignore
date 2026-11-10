@@ -1,1 +1,4 @@
 /target
+# OCaml / Dune
+_build/
+*.install

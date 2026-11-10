@@ -1,0 +1,3 @@
+(library
+ (name marrow_frontend)
+ (modules ast token diagnostics lexer parser resolver typing elaboration))
