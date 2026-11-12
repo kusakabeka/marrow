@@ -4,7 +4,7 @@ type binop =
     | And | Or
 
 type unop =
-    | Neq
+    | Neg
     | Not
 
 type mutability =
@@ -20,7 +20,7 @@ type expr =
     | UnOp of unop * expr
 
     | If of expr * expr * expr
-    | Let of string * expr * expr * expr
+    | Let of mutability * string * expr * expr
 
     | Lambda of string * expr
     | Apply of expr * expr
