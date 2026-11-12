@@ -14,8 +14,8 @@ let string_of_binop = function
 
 
 let string_of_unop = function
-    | Ast.Neg -> "-"
-    | Ast.Not -> "!"
+  | Ast.Neg -> "-"
+  | Ast.Not -> "!"
 
 let rec string_of_expr = function
     | Ast.Int n ->
