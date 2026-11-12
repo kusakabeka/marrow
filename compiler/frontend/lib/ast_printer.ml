@@ -12,7 +12,7 @@ let string_of_binop = function
     | Ast.And -> "&&"
     | Ast.Or -> "||"
 
-
+let strint_of_smth (op: Ast.)
 let string_of_unop = function
   | Ast.Neg -> "-"
   | Ast.Not -> "!"

@@ -2,10 +2,10 @@
 
 (** Binary operation - operators that take two operands.
 
-    Each [binop] value corresponds to one language operators and
-    is applied to a pair of expression: [{e_1 op e_2}].
+    Each [binop] value corresponds to one of the language's operators and
+    is applied to a pair of expressions: [{e_1 op e_2}].
     All Binary operations are infix; precedence and associativity
-    are specified during the parsing stage, not here - this representaion captures the already parsed tree.
+    are specified during the parsing stage, not here - this representaion describes the already parsed tree.
 
     Operations groups:
     {2 Arithmetic}
@@ -13,10 +13,10 @@
     - {!Sub} - subtraction: [e_1 - e_2], result type - numeric
     - {!Mul} - multiplication: [e_1 * e_2], result type - numeric
     - {!Div} - division: [e_1 / e_2], result type - numeric
-      Division by zero is undefiend at the AST level; the check pertains to runtime semantics/analysis.
+      Division by zero is undefined at the AST level; the check pertains to runtime semantics/analysis.
 
-    {2 Comprarison}
-    Comprarison operation return a boolean type ([Bool])
+    {2 Comprasion}
+    Comprasion operation return a boolean type ([Bool])
     - {!Eq} - equality: [e_1 == e_2]
     - {!Neq} - inequality: [e_1 != e_2]
     - {!Lt} - less than: [e_1 < e_2]
@@ -29,7 +29,8 @@
     - {!And} - conjunction: [e_1 && e_2]
     - {!Or} - disjunction: [e_1 || e_2]
 
-    @see_AST_EXPR see [Ast.BinOp] - a tree node representing an operation.
+    @see <https://en.wikipedia.org/wiki/Abstract_syntax_tree>
+      Abstract syntax tree
  **)
 type binop =
     | Add (** Addition of two numerical expressions: [e_1 + e_2] **)
@@ -39,7 +40,7 @@ type binop =
     | Eq (** Equality: [e_1 == e_2], result - [Bool] **)
     | Neq (** Inequality: [e_1 != e_2], result - [Bool] **)
     | Lt (** Less than: [e_1 < e_2], result - [Bool] **)
-    | Le (** Less than of equal to: [e_1 <= e_2], result - [Bool] **)
+    | Le (** Less than or equal to: [e_1 <= e_2], result - [Bool] **)
     | Gt (** Greater than: [e_1 > e_2], result - [Bool] **)
     | Ge (** Greater than or equal to: [e_1 >= e_2], result - [Bool] **)
     | And (** Logical AND: [e_1 && e_2], result - [Bool] **)
